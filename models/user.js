@@ -18,11 +18,11 @@ const userSchema = new mongoose.Schema({
     match: /^\+\d{1,3}$/,
   },
   mobile: {
-    type: String,
-    required: true,
-    unique: true,
-    match: /^\+\d{1,3}\d{10}$/,
-  },
+  type: String,
+  required: true,
+  unique: true,
+  match: /^[1-9]\d{5,11}$/,  // Starts with 1-9, followed by 5 to 11 digits (total 6 to 12 digits)
+},
   email: {
     type: String,
     required: true,
